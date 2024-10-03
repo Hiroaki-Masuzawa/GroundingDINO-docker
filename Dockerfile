@@ -9,7 +9,7 @@ RUN pip3 install torch torchvision torchaudio --index-url https://download.pytor
 ### speedup download
 # https://genzouw.com/entry/2019/09/04/085135/1718/
 RUN sed -i 's@archive.ubuntu.com@ftp.jaist.ac.jp/pub/Linux@g' /etc/apt/sources.list
-ENV TORCH_CUDA_ARCH_LIST="6.0 6.1 7.0 7.5 8.0 8.6+PTX 8.9" \
+ENV TORCH_CUDA_ARCH_LIST="5.0 5.2 6.0 6.1 7.0 7.5 8.0 8.6+PTX 8.9" \
     SETUPTOOLS_USE_DISTUTILS=stdlib
     
 RUN mkdir /source && cd /source && \
