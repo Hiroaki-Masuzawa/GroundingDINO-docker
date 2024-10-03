@@ -6,8 +6,8 @@ docker run --rm -it \
 -u `id -u`:`id -g` \
 -v /etc/passwd:/etc/passwd:ro \
 -v /etc/group:/etc/group:ro \
--v `pwd`:/workdir \
 -v $SCRIPT_DIR/homedir:/home/`whoami` \
+-v `pwd`:/workdir \
 -v $HOME/.Xauthority:$HOME/.Xauthority \
 --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 --privileged \
