@@ -3,6 +3,7 @@ xhost +
 
 docker run --rm -it \
 --gpus all \
+--net=host \
 -u `id -u`:`id -g` \
 -v /etc/passwd:/etc/passwd:ro \
 -v /etc/group:/etc/group:ro \
